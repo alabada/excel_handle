@@ -9,6 +9,7 @@ import alabada.importfile.FileImportExecutor;
 import alabada.importfile.domain.MapResult;
 import alabada.importfile.domain.common.Configuration;
 import alabada.importfile.exception.FileImportException;
+import com.alibaba.fastjson.JSON;
 
 import java.io.*;
 import java.math.BigDecimal;
@@ -29,22 +30,19 @@ public class Test {
     public static void testImport() throws FileImportException, FileNotFoundException, URISyntaxException {
 
         ConfigParser configParser = ConfigurationParserFactory.getConfigParser(Configuration.ParserType.XML);
-        URI uri = Test.class.getResource("import/testImport.xlsx").toURI();
+        URI uri = Test.class.getResource("import/testExcel.xlsx").toURI();
         File importFile = new File(uri);
         Configuration configuration = null;
         try {
-            configuration = configParser.getConfig(Test.class.getResourceAsStream("import/config.xml"));
+            configuration = configParser.getConfig(Test.class.getResourceAsStream("import/config1.xml"));
             MapResult mapResult = (MapResult) FileImportExecutor.importFile(configuration, importFile, importFile.getName());
             List<Map> maps = mapResult.getResult();
             for (Map<String, Object> map : maps) {
-                int index = (int) map.get("index");
-                float f1 = (float) map.get("float");
-                String string = (String) map.get("string");
-                Date date = (Date) map.get("date");
-                BigDecimal bigDecimal = (BigDecimal) map.get("bigdecimal");
 
-                System.out.println("index :" + index + " f1 : " + f1 + " string : " + string
-                        + " date : " + date.toString() + " bigdecimal " + bigDecimal);
+//                System.out.println(JSON.toJSONString(map));
+
+                System.out.println(map.get("ERP单号"));
+
             }
         } catch (FileImportException e) {
             System.out.println(e);
