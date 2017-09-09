@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<importFile>
+	<startRowNo>1</startRowNo>
+	<cell>
+		<number>0</number>
+		<key>time</key>
+		<cellType>String</cellType>
+		<nullble>0</nullble>
+	</cell>
+	<cell>
+		<number>1</number>
+		<key>price</key>
+		<cellType>String</cellType>
+		<nullble>0</nullble>
+	</cell>
+	<cell>
+		<number>2</number>
+		<key>changePrice</key>
+		<cellType>String</cellType>
+		<nullble>0</nullble>
+	</cell>
+	<cell>
+		<number>3</number>
+		<key>amount</key>
+		<cellType>String</cellType>
+		<nullble>0</nullble>
+	</cell>
+	<cell>
+		<number>4</number>
+		<key>money</key>
+		<cellType>String</cellType>
+		<nullble>0</nullble>
+	</cell>
+	<cell>
+		<number>2</number>
+		<key>buyOrSell</key>
+		<cellType>String</cellType>
+		<nullble>0</nullble>
+	</cell>
+
+</importFile>
+
