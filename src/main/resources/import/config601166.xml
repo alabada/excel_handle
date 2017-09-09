@@ -32,7 +32,7 @@
 		<nullble>0</nullble>
 	</cell>
 	<cell>
-		<number>2</number>
+		<number>5</number>
 		<key>buyOrSell</key>
 		<cellType>String</cellType>
 		<nullble>0</nullble>
